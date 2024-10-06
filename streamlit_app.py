@@ -84,7 +84,9 @@ with st.container():
                 mui.CardContent(
                     mui.Typography("Streamlit App 3: Market Matrix", variant="h6"),
                     mui.Typography(
-                        "This app illustrates ",
+                        """This app illustrates the performance of the S&P 500
+                        over the long term and the convergence to its long term
+                        return regardless of starting period.""",
                         sx={"mb": 2},
                     ),
                     mui.Button(
