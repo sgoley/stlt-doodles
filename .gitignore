@@ -1,0 +1,9 @@
+# python
+.venv/
+/*/.venv
+
+# packaging
+*.lock
+
+# ide
+.vscode/
