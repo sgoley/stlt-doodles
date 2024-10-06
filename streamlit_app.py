@@ -21,6 +21,7 @@ with st.container():
     st.write(
         "This is a simple Streamlit app to showcase a number of other Streamlit apps that I've built with Cursor.ai"
     )
+    st.write("More about me at [scottgoley.com](https://scottgoley.com/)")
 
     st.write("---")
 
