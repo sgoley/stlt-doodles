@@ -32,6 +32,7 @@ with st.container():
             dashboard.Item("app2", 2, 0, 2, 3),
             dashboard.Item("app3", 0, 2, 2, 3),
             dashboard.Item("app4", 2, 2, 2, 3),
+            dashboard.Item("app5", 0, 4, 2, 3),
         ]
 
         with dashboard.Grid(layout):
@@ -113,6 +114,20 @@ with st.container():
                     mui.Button(
                         "Launch CSV Explorer",
                         href="https://sg-csv-explorer.streamlit.app/",
+                        target="_blank",
+                    ),
+                )
+
+            with mui.Card(key="app5", sx={"height": "100%"}):
+                mui.CardContent(
+                    mui.Typography("Streamlit App 5: GFC Explorer", variant="h6"),
+                    mui.Typography(
+                        "This app allows you to explore the Home Price Index dataset from The Federal Housing Finance Agency see that data visualized a few different ways.",
+                        sx={"mb": 2},
+                    ),
+                    mui.Button(
+                        "Launch GFC Explorer",
+                        href="https://sg-gfc-explorer.streamlit.app/",
                         target="_blank",
                     ),
                 )
