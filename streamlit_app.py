@@ -14,6 +14,8 @@ protein_calc_img = image_to_base64("./img/st_protein_calc.png")
 lottery_heatmap_img = image_to_base64("./img/st_lottery_heatmap.png")
 market_matrix_img = image_to_base64("./img/st_market_matrix.png")
 csv_explorer_img = image_to_base64("./img/st_csv_explorer.png")
+gfc_explorer_img = image_to_base64("./img/st_gfc_explorer.png")
+address_autofill_img = image_to_base64("./img/st_address_autofill.png")
 
 st.title("Streamlit Doodles")
 
@@ -33,6 +35,7 @@ with st.container():
             dashboard.Item("app3", 0, 2, 2, 3),
             dashboard.Item("app4", 2, 2, 2, 3),
             dashboard.Item("app5", 0, 4, 2, 3),
+            dashboard.Item("app6", 2, 4, 2, 3),
         ]
 
         with dashboard.Grid(layout):
@@ -119,6 +122,12 @@ with st.container():
                 )
 
             with mui.Card(key="app5", sx={"height": "100%"}):
+                mui.CardMedia(
+                    component="img",
+                    height="140",
+                    image=f"data:image/png;base64,{gfc_explorer_img}",
+                    alt="GFC Explorer thumbnail",
+                )
                 mui.CardContent(
                     mui.Typography("Streamlit App 5: GFC Explorer", variant="h6"),
                     mui.Typography(
@@ -128,6 +137,26 @@ with st.container():
                     mui.Button(
                         "Launch GFC Explorer",
                         href="https://sg-gfc-explorer.streamlit.app/",
+                        target="_blank",
+                    ),
+                )
+
+            with mui.Card(key="app6", sx={"height": "100%"}):
+                mui.CardMedia(
+                    component="img",
+                    height="140",
+                    image=f"data:image/png;base64,{address_autofill_img}",
+                    alt="Address Autofill thumbnail",
+                )
+                mui.CardContent(
+                    mui.Typography("Streamlit App 6: Address Autofill", variant="h6"),
+                    mui.Typography(
+                        "This app allows you to input an address with suggestions and get a map of the selected location.",
+                        sx={"mb": 2},
+                    ),
+                    mui.Button(
+                        "Launch Address Autofill",
+                        href="https://sg-address-autofill.streamlit.app/",
                         target="_blank",
                     ),
                 )
